@@ -1,4 +1,10 @@
 'use strict';
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Global variables for DOM access and such
+
+var SalmonForm = document.getElementById('salmon-form');
+
+
 //var randCustPerHr;
 var businessHour = ['6am: ','7am: ', '8am: ', '9am: ','10am:','11am:', '12pm:', '1pm: ','2pm: ','3pm:', '4pm:', '5pm: ', '6pm: ','7pm: ', '8pm: '];
 var allStores = [];
@@ -95,3 +101,12 @@ function storeRows() { //eslint-disable-line
   }
 }
 storeRows();
+//This is my function declaration for the event handler
+function handlerInfoSubmit(event) {
+if (!event.target.storeName.value || !event.target.storeName.value) {
+    return alert('Fields cannot be empty!');
+  }
+}
+
+//Event Listerner
+SalmonForm.addEventListener('submit', handlerInfoSubmit);
