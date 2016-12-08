@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Lab 7</title>
+   <title>Lab 7 Forms</title>
    <link rel="stylesheet" href="styles.css">
  </head>
  <body>
@@ -9,11 +9,31 @@
 
    <h1>Store Locations</h1>
 
-   <img src="https://github.com/codefellows/seattle-201d17/blob/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png">
+   <img src="assets/salmon.png">
 
+    <form id="salmon form">
+      <fieldset>
+        <legend><legend>
+
+        <label for ="Store Name">Store Name: </label>
+        <input name = "storeName" type="text" size="25" />
+
+        <label for ="minCustPerHr">Minimum Cookies Purchased: </label>
+        <input name = "minCustPerHr" type="text" size="25" />
+
+        <label for ="maxCustPerHr">Maximum Cookies Purchased: </label>
+        <input name = "maxCustPerHr" type="text" size="25" />
+
+        <label for ="avgCookiesPerCust">Average Cookies Per Customer: </label>
+        <input name = "avgCookiesPerCust" type="text" size="25" />
+        <div>
+        <button type="submit">Create New Store!</button>
+        </div>
+      </fieldset>
+    </form>
+      <div>
       <table id = 'cookies'> </table>
-
-
+      </div>
 
 <script src="app.js"></script>
 </body>
