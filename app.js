@@ -110,15 +110,14 @@ function footerRows () {
 
     for(var j = 0; j < allStores.length; j++) {//this adds the data in total cookies for each store location
       console.log(allStores[j][i]);
-      footerTotal += allStores[j][i];
+      footerTotal += allStores[j].totalCookies[i];
     }
-
+    totalOfTotals += footerTotal;
     console.log('footer total', footerTotal)
     var tdEc = document.createElement ('td'); //used different variable so I didnt' overwrite it
     tdEc.textContent = footerTotal;
     trEl.appendChild(tdEc);
   }
-  totalOfTotals =+ footerTotal;
   var tdEf = document.createElement ('td');
   tdEf.textContent = totalOfTotals;
   trEl.appendChild(tdEf);
